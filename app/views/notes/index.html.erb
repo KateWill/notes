@@ -1,8 +1,9 @@
 <h1>Viewing All Notes (in index)</h1>
 
-<!-- Where is the notes instance variable being created? -->
 <% @notes.each_with_index do |n, i| %>
-  <%= link_to "View Note ##{i+1}", note_path(n) %><br/>
+  <%= link_to "View Note ##{i+1}", note_path(n) %>
+  <%= link_to "Edit Note", edit_note_path(n) %>
+  <%= link_to "Delete Note", n, method: :delete  %><br/>
 <% end %>
 
-<%= link_to 'Create New Note', new_note_path %>
+
