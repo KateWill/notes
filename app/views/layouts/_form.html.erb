@@ -1,14 +1,7 @@
-<% if false %>
-  t.string "title"
-  t.string "author"
-  t.text "body"
-  t.string "send_to"
-
-
-<h1>Create A New Note:</h1>
-
 <div class="form-wrapper">
-  <%= form_for @note do |n| %>
+<h1><%= @note.id ? "Edit Notes" : "Create new Note" %> </h1>
+<h2><%= @note.id %></h2>
+  <%= form_for @note do |n| %> 
     <%= n.label :title %>
     <%= n.text_field :title %>
     <br/><br/>
@@ -24,7 +17,3 @@
     <%= n.submit %>
   <% end %>
 </div>
-<% end %>
-
-<%= render 'layouts/form' %>
-

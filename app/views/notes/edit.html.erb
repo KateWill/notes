@@ -1,17 +1,1 @@
-<div class="form-wrapper">
-  <%= form_for @note do |n| %>
-    <%= n.label :title %>
-    <%= n.text_field :title %>
-    <br/><br/>
-    <%= n.label :author %>
-    <%= n.text_field :author %>
-    <br/><br/>
-    <%= n.label :body %>
-    <%= n.text_area :body %>
-    <br/><br/>
-    <%= n.label :send_to %>
-    <%= n.text_field :send_to %>
-    <br/><br/>
-    <%= n.submit %>
-  <% end %>
-</div>
+<%= render 'layouts/form' %>
